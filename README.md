@@ -8,16 +8,16 @@
 02. **Designing User Interface** [ https://getbootstrap.com/docs/3.3/components/ ]
     * "List group" for left menu
     * "Thumbnail" for product list
-    * Image: ``` <img src="<?= Yii::$app->request->baseUrl; ?>/img/nocover.jpg"> ```
+    * Image [views/site/index.php]: ``` <img src="<?= Yii::$app->request->baseUrl; ?>/img/nocover.jpg"> ```
 
 03. **Working with database**
-    3.1 create a database "any_name"
-    3.2 create a "user" table [8 columns]
-        - id, first_name, last_name, email, username, password, authKey, accessToken
-    3.3 create a "category" table [2 columns]
-        - id, name
-    3.4 create a "product" table [7 columns]
-        - id, name, price, expire_date, description, image, category_id
+    * create a database "any_name"
+    * create a "user" table [8 columns]
+        * id, first_name, last_name, email, username, password, authKey, accessToken
+    * create a "category" table [2 columns]
+        * id, name
+    * create a "product" table [7 columns]
+        * id, name, price, expire_date, description, image, category_id
 
 04. Creating MVC (Model View Controller)
     4.1 rename UserModel.php 
