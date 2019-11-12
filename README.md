@@ -44,9 +44,9 @@
         * resource - https://www.bookrix.com/books;short-story,id:55.html
     * Display product list: http://localhost/booky/web/product/index
     * Display category at the home page as leftview
-        * ```<?php foreach ($categoryAll as $category): ?>
-                <a href="<?= Yii::$app->request->baseUrl ?>/site/index?id=<?= $category->id; ?>" class="list-group-item"><?= $category->name; ?></a>
-          <?php endforeach; ?>```
+        * ```<?php foreach ($categoryAll as $category): ?>```
+                ```<a href="<?= Yii::$app->request->baseUrl ?>/site/index?id=<?= $category->id; ?> class="list-group-item"><?= $category->name; ?></a>```
+          ```<?php endforeach; ?>```
 
 07. Working with image upload
     7.1 in model
