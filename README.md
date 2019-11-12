@@ -8,7 +8,7 @@
 02. **Designing User Interface** [ https://getbootstrap.com/docs/3.3/components/ ]
     * "List group" for left menu
     * "Thumbnail" for product list
-    * Image: <img src="<?= Yii::$app->request->baseUrl; ?>/img/nocover.jpg">
+    * Image: <!-- <img src="<?= Yii::$app->request->baseUrl; ?>/img/nocover.jpg"> -->
 
 03. **Working with database**
     3.1 create a database "any_name"
