@@ -19,25 +19,34 @@
     * create a "product" table [7 columns]
         * id, name, price, expire_date, description, image, category_id
 
-04. Creating MVC (Model View Controller)
-    4.1 rename UserModel.php 
-    4.2 browse url/gii
-    4.3 create Models
-    4.4 create cruds
+04. **Creating MVC (Model View Controller)**
+    * rename User.php as UserAnyName.php [models/User.php]
+    * browse url/gii
+    * create Models
+    * create CRUDS
 
 05. Authentication
-    5.1 Add "Sign Up" at top menu
-        - Yii::$app->user->isGuest ? (['label' => 'Signup', 'url' => ['/user/create']]) : (''),
-    5.2 Update User Model, View, Controller
-    5.3 Update User Model for logging in
+    * Add "Sign Up" at top menu [views/layouts/main.php]
+        * ``` Yii::$app->user->isGuest ? (['label' => 'Signup', 'url' => ['/user/create']]) : (''), ```
+    * Display a success message on submission of Sign Up
+        * ``` Yii::$app->session->setFlash('success', 'Congratulation! You account has been created.'); ```
+    * Update Model [models/User.php]
+        * class User: ``` implements \yii\web\IdentityInterface ```
+        * findIdentity: ``` return User::find()->where(['id' => $id])->one(); ```
+        * findIdentityByAccessToken: ``` return User::find()->where(['accessToken' => $token])->one(); ```
+        * findByUsername: ``` return User::find()->where(['username' => $username])->one(); ```
 
-06. Working with Products
-    6.1 Add "Product" at top menu - https://www.yiiframework.com/doc/api/2.0/yii-widgets-menu
-    6.2 Add Category 
-    6.3 Display Category at left
-    6.4 Create product https://www.bookrix.com/books;short-story,id:55.html
-    6.5 Add product
-    6.6 Display at the home page
+06. **Working with Products**
+    * Add "Product" item at the top menu [ layouts/main.php from https://www.yiiframework.com/doc/api/2.0/yii-widgets-menu ]
+    * Create Category: http://localhost/booky/web/category/create
+    * Display Category list: http://localhost/booky/web/category/index
+    * Create product: http://localhost/booky/web/product/create
+        * resource - https://www.bookrix.com/books;short-story,id:55.html
+    * Display product list: http://localhost/booky/web/product/index
+    * Display category at the home page as leftview
+        * ```<?php foreach ($categoryAll as $category): ?>
+                <a href="<?= Yii::$app->request->baseUrl ?>/site/index?id=<?= $category->id; ?>" class="list-group-item"><?= $category->name; ?></a>
+          <?php endforeach; ?>```
 
 07. Working with image upload
     7.1 in model
