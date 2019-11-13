@@ -7,7 +7,7 @@ $this->title = 'Booky';
 
 <div class="row">
 
-    <div class="col-sm-3">
+    <div class="col-md-3">
         <div class="list-group">
             <a href="#" class="list-group-item disabled">
                 Categories
@@ -20,7 +20,7 @@ $this->title = 'Booky';
 
     <?php foreach ($productAll as $product): ?>
 
-    <div class="col-sm-3 col-md-3">
+    <div class="col-md-3">
         <div class="thumbnail">
             <img style="height: 200px" src="<?= Yii::$app->request->baseUrl; ?>/gallery/<?= ($product->image != null) ? $product->image : 'nocover.jpg'; ?>" alt="...">
             <div class="caption">
@@ -33,5 +33,5 @@ $this->title = 'Booky';
 
     <?php endforeach; ?>
 
-
+</div>
 
