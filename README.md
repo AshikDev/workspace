@@ -6,6 +6,7 @@
 01. **Configure site** [config/web.php]
     * set cookie validation key
     ```'cookieValidationKey' => 'anyThing',```
+    * browse the site: http://localhost/booky/web/
     * Enable pretty url by uncommenting this section
     ```
     'urlManager' => [
@@ -172,6 +173,6 @@
     ``` 
     
 10. **Home Task** 
-    * Show detail view of the product while click on the product name
+    * Show detail view of the product while clicking on the product name
     * User will be able to upload PDF as a book while adding product
-    * Activate "Download" button
+    * Activate "Download" button for that PDF "Book"
