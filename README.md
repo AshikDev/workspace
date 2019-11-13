@@ -177,7 +177,7 @@
     * User will be able to upload PDF as a book while adding product
     * Activate "Download" button for that PDF "Book"
     
-**Extras (Git):**
+11. **Extras (Git):**
     * sudo git clone https://github.com/AshikDev/workspace.git booky
     * sudo git init
     * sudo git add .
