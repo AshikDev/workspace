@@ -176,3 +176,11 @@
     * Show detail view of the product while clicking on the product name
     * User will be able to upload PDF as a book while adding product
     * Activate "Download" button for that PDF "Book"
+    
+**Extras (Git):**
+    * sudo git clone https://github.com/AshikDev/workspace.git booky
+    * sudo git init
+    * sudo git add .
+    * sudo git commit -m "Version Number"
+    * sudo git remote add origin https://github.com/AshikDev/workspace.git
+    * sudo git push origin master
